@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetLevels Version="1.1">
+  <AssetLevel Level="1" LevelName="图片,音乐,Shader">
+    <AssetPackage PackageName="adfdfaf" Version="2" IsSingle="1">
+      <AssetFile><![CDATA[Assets/meteral]]></AssetFile>
+    </AssetPackage>
+  </AssetLevel>
+  <AssetLevel Level="2" LevelName="Mesh,Materials,Prefabs">
+    <AssetPackage PackageName="ppp" Version="2" IsSingle="0">
+      <AssetFile><![CDATA[Assets/meteral]]></AssetFile>
+    </AssetPackage>
+  </AssetLevel>
+  <AssetLevel Level="3" LevelName="场景">
+    <AssetPackage PackageName="ppp" Version="2" IsSingle="1">
+      <AssetFile><![CDATA[Assets/picture]]></AssetFile>
+    </AssetPackage>
+  </AssetLevel>
+</AssetLevels>

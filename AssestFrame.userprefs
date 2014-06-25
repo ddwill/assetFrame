@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Config\scenceDatas.xml">
+    <Files>
+      <File FileName="Assets\Scripts\AssetBundle\ScenceData.cs" Line="90" Column="49" />
+      <File FileName="Assets\test\test.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tool\File\FileTool.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Config\ConfigPath.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AssetBundle\ScencesManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Editor\AssetBundle 1\SaveOptionWindow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tool\XML\XMLTool.cs" Line="23" Column="47" />
+      <File FileName="Assets\Resources\Config\scenceDatas.xml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

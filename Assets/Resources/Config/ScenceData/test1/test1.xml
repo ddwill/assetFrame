@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="gb2312"?>
+<EditorScenceData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" isShowChild="true">
+  <path>Assets/test/test1.unity</path>
+  <footItemList>
+    <EditorScenceItemData scenceName="test1" scencePath="Assets/test/test1.unity" isShowChild="false" deep="1" isNeedSave="true" isSetChildResourcePath="false" Name="Cube">
+      <childItemDatas />
+      <parentPrefabPath>Assets/Cube 2.prefab</parentPrefabPath>
+      <goPosition>(0.0, 1.0, 10.0)</goPosition>
+      <goRotation>(0.0, 0.0, 0.0, 1.0)</goRotation>
+      <goScale>(1.0, 1.0, 1.0)</goScale>
+      <Path>Resources/ScenceSave/test1/Cube.prefab</Path>
+      <ChildResourcePath>Resources/ScenceSave/test1</ChildResourcePath>
+      <AutoSaveChild>false</AutoSaveChild>
+    </EditorScenceItemData>
+    <EditorScenceItemData scenceName="test1" scencePath="Assets/test/test1.unity" isShowChild="false" deep="1" isNeedSave="true" isSetChildResourcePath="false" Name="Cube">
+      <childItemDatas />
+      <Path>Resources/ScenceSave/test1/Cube.prefab</Path>
+      <ChildResourcePath>Resources/ScenceSave/test1</ChildResourcePath>
+      <AutoSaveChild>false</AutoSaveChild>
+    </EditorScenceItemData>
+    <EditorScenceItemData scenceName="test1" scencePath="Assets/test/test1.unity" isShowChild="false" deep="1" isNeedSave="true" isSetChildResourcePath="false" Name="Cube">
+      <childItemDatas />
+      <Path>Resources/ScenceSave/test1/Cube$1.prefab</Path>
+      <ChildResourcePath>Resources/ScenceSave/test1</ChildResourcePath>
+      <AutoSaveChild>false</AutoSaveChild>
+    </EditorScenceItemData>
+    <EditorScenceItemData scenceName="test1" scencePath="Assets/test/test1.unity" isShowChild="false" deep="1" isNeedSave="true" isSetChildResourcePath="false" Name="Cube">
+      <childItemDatas>
+        <EditorScenceItemData scenceName="test1" scencePath="Assets/test/test1.unity" isShowChild="false" deep="2" isNeedSave="false" isSetChildResourcePath="false" Name="Cube">
+          <childItemDatas />
+          <Path>Resources/ScenceSave/test1/Cube/Cube.prefab</Path>
+          <ChildResourcePath>Resources/ScenceSave/test1</ChildResourcePath>
+          <AutoSaveChild>false</AutoSaveChild>
+        </EditorScenceItemData>
+      </childItemDatas>
+      <Path>Resources/ScenceSave/test1/Cube$2.prefab</Path>
+      <ChildResourcePath>Resources/ScenceSave/test1</ChildResourcePath>
+      <AutoSaveChild>false</AutoSaveChild>
+    </EditorScenceItemData>
+    <EditorScenceItemData scenceName="test1" scencePath="Assets/test/test1.unity" isShowChild="false" deep="1" isNeedSave="true" isSetChildResourcePath="false" Name="map01_road03">
+      <childItemDatas />
+      <parentPrefabPath>Assets/map01_road03.FBX</parentPrefabPath>
+      <goPosition>(0.0, 0.0, 8.5)</goPosition>
+      <goRotation>(-0.7, 0.0, 0.0, 0.7)</goRotation>
+      <goScale>(1.0, 1.0, 1.4)</goScale>
+      <Path>Resources/ScenceSave/test1/map01_road03.prefab</Path>
+      <ChildResourcePath>Resources/ScenceSave/test1</ChildResourcePath>
+      <AutoSaveChild>false</AutoSaveChild>
+    </EditorScenceItemData>
+  </footItemList>
+</EditorScenceData>

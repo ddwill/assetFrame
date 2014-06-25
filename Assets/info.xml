@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="gb2312"?>
+<EditorScenceData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" isShowChild="true">
+  <path>Assets/test/test1.unity</path>
+  <footItemList>
+    <EditorScenceItemData scenceName="test1" scencePath="Assets/test/test1.unity" isShowChild="false" deep="1" isNeedSave="true" isSetChildResourcePath="false">
+      <childItemDatas />
+      <Path>Resources/ScenceSave/test1/cc1.prefab</Path>
+      <ChildResourcePath>Resources/ScenceSave/test1</ChildResourcePath>
+    </EditorScenceItemData>
+    <EditorScenceItemData scenceName="test1" scencePath="Assets/test/test1.unity" isShowChild="false" deep="1" isNeedSave="true" isSetChildResourcePath="false">
+      <childItemDatas />
+      <Path>Resources/ScenceSave/test1/GameObject.prefab</Path>
+      <ChildResourcePath>Resources/ScenceSave/test1</ChildResourcePath>
+    </EditorScenceItemData>
+    <EditorScenceItemData scenceName="test1" scencePath="Assets/test/test1.unity" isShowChild="false" deep="1" isNeedSave="true" isSetChildResourcePath="false">
+      <childItemDatas />
+      <Path>Resources/ScenceSave/test1/Main Camera.prefab</Path>
+      <ChildResourcePath>Resources/ScenceSave/test1</ChildResourcePath>
+    </EditorScenceItemData>
+    <EditorScenceItemData scenceName="test1" scencePath="Assets/test/test1.unity" isShowChild="false" deep="1" isNeedSave="true" isSetChildResourcePath="false">
+      <childItemDatas />
+      <Path>Resources/ScenceSave/test1/Cube.prefab</Path>
+      <ChildResourcePath>Resources/ScenceSave/test1</ChildResourcePath>
+    </EditorScenceItemData>
+  </footItemList>
+</EditorScenceData>
