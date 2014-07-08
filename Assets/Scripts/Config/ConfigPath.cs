@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
 
 public class ConfigPath {
 
@@ -37,5 +38,66 @@ public class ConfigPath {
 	public static string TrimSuffix(string path)
 	{
 		return path.Split('.')[0];
+	}
+
+	/// <summary>
+	/// 全局路径到Assets的相对路径
+	/// </summary>
+	/// <returns>The path_ assets.</returns>
+	/// <param name="path">Path.</param>
+	public static string TrimPath_Assets(string path)
+	{
+		int index = path.IndexOf ("Assets");
+		if (index < 0) return null;
+		return path.Substring (index);
+
+	}
+
+	/// <summary>
+	/// 检测路径指定的文件是否存在，若存在则返回 标示后加数字的路径。
+	/// 如：
+	/// globalPath= c://aaa/qq.txt c='#' 如果文件存在则返回 c://aaa/qq#1.txt
+	/// </summary>
+	/// <returns>The un exist path by global path.</returns>
+	/// <param name="globalPath">Global path.</param>
+	/// <param name="c">C.</param>
+	public static string GetUnExistPathByAssetPath(string assetPath,char c)
+	{
+		string path = Application.dataPath +"/"+ assetPath;
+		
+		return ConfigPath.TrimPath_Assets( GetUnExistPathByGlobalPath (path));
+	}
+	
+	/// <summary>
+	/// 检测路径指定的文件是否存在，若存在则返回 标示后加数字的路径。
+	/// 如：
+	/// globalPath= c://aaa/qq.txt c='#' 如果文件存在则返回 c://aaa/qq#1.txt
+	/// </summary>
+	/// <returns>The un exist path by global path.</returns>
+	/// <param name="globalPath">Global path.</param>
+	/// <param name="c">C.</param>
+	public static string GetUnExistPathByGlobalPath(string globalPath, char c)
+	{
+		if (!File.Exists (globalPath))
+		{
+			return globalPath;
+		}
+		
+		string fileName =  Path.GetFileNameWithoutExtension (globalPath);
+		
+		
+		string returnName;
+		string[] paths = fileName.Split[c];
+		
+		if (paths.Length>1) 
+		{	
+			returnName = paths[0]+c+(int.Parse(paths[1])+1);
+		}else
+		{
+			returnName = paths[0]+c+1;
+		}
+		
+		return   GetUnExistPathByGlobalPath( Path.GetDirectoryName (globalPath)
+		                                    + returnName  + Path.GetExtension (globalPath));
 	}
 }

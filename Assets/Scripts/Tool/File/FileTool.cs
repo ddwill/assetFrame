@@ -22,4 +22,6 @@ public class FileTool{
 		bool isExists = System.IO.Directory.Exists(dirPath);
 		if(isExists) Directory.Delete (dirPath, true);
 	}
+
+
 }

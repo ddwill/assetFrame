@@ -66,21 +66,34 @@ public class ImportModuleWindow : EditorWindow {
 		}
 
 		inputName = GUILayout.TextField (inputName, GUILayout.Width (100f));
+		
+
+
+		GUILayout.EndHorizontal ();
+
+
+		GUILayout.BeginHorizontal ();
+		GUILayout.Label("SavePath", GUILayout.Width(60f));
+		GUILayout.Label(fbxPath, GUILayout.Width(260f));
+		GUILayout.EndHorizontal ();
 
 
 		if(GUILayout.Button("Import",GUILayout.Width(50)))
 		{
 			importMesh();
 		}
-		GUILayout.EndHorizontal ();
 		GUILayout.EndVertical ();
 	}
 
-	public void importMesh()
+	public void importMesh(string sourcePath,string fileName)
 	{
-		Debug.Log (Application.dataPath);
+		string desPath = ConfigPath.MODEL_STORE_GLOBAL_PATH;
+		ConfigPath.GetUnExistPathByGlobalPath (desPath,'#');
+	}
 
-		ConfigPath.MODEL_STORE_GLOBAL_PATH+
+	public string getPath(string sourcePath)
+	{
+
 	}
 }
 
