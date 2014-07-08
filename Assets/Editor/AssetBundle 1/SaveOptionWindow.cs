@@ -55,7 +55,6 @@ public class SaveOptionWindow : EditorWindow {
 		bool isReplace = false;
 		if (File.Exists (XmlPath)) 
 		{
-
 			Color lastColor = GUI.color;
 			GUI.color = Color.yellow;
 			GUILayout.Label("Exist",GUILayout.Width (40f));
@@ -63,7 +62,6 @@ public class SaveOptionWindow : EditorWindow {
 
 			exportButtonName = "Replace";
 			isReplace = true;
-
 		}
 
 

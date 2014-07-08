@@ -1,21 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Text;
 
+
 public class test : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//EditorUtility.OpenFilePanel ("!!!", Application.dataPath, "");
+
 		//print (Application.dataPath);
 		ScencesManager.LoadScenceViewData ("test1");
-		AssetDatabase.Refresh ();
+		//print( ConfigPath.TrimPath_Resource (ConfigPath.RESOURCES_CONFIG_SCENCEDATA));
+		//AssetDatabase.Refresh ();
 		//ScencesManager.LoadScenceViewData ("test1");
 		//print( File.Exists ("E:/aa.txt"));
+		//BuildAssetBundlesFromDirectory
 	}
 	
 	// Update is called once per frame
@@ -23,6 +27,10 @@ public class test : MonoBehaviour {
 		
 	}
 
+	void OnGUI()
+	{
+
+	}
 
 
 	private void loadXML()

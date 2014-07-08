@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 
 public class FileTool{
@@ -19,7 +20,6 @@ public class FileTool{
 	{
 		string dirPath = Application.dataPath +"/"+ System.IO.Path.GetDirectoryName (path).TrimStart ("Assets/".ToCharArray ());
 		bool isExists = System.IO.Directory.Exists(dirPath);
-		if(isExists)
-			Directory.Delete (dirPath, true);
+		if(isExists) Directory.Delete (dirPath, true);
 	}
 }

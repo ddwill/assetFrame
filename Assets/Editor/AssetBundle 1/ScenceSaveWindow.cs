@@ -33,6 +33,9 @@ public class ScenceSaveWindow : EditorWindow {
 
 	public void init()
 	{
+		string scencePath = EditorApplication.currentScene;
+		EditorApplication.SaveScene(scencePath);
+
 		scencesNum = UnityEditor.EditorBuildSettings.scenes.Length;
 		this.mScroll = new Vector2[scencesNum];
 
@@ -87,6 +90,10 @@ public class ScenceSaveWindow : EditorWindow {
 		GUILayout.EndVertical ();
 	}
 
+	/// <summary>
+	/// 在OnGUI中显示视图中的元素
+	/// </summary>
+	/// <param name="data">元素数据</param>
 	private void ShowScenceItemData(EditorScenceItemData data)
 	{
 		GUILayout.BeginHorizontal ();
