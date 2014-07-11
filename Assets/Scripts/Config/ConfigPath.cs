@@ -12,10 +12,11 @@ public class ConfigPath {
 
 
 	public const string MODEL_STORE_PATH = RESOURCES_PATH+"Model/";
-	public const string MODEL_STORE_GLOBAL_PATH = Application.dataPath + "/Resources/Model/";
+	public static string MODEL_STORE_GLOBAL_PATH = Application.dataPath + "/Resources/Model/";
+	public static string MESH_STORE_GLOBAL_PATH = MODEL_STORE_GLOBAL_PATH + "Mesh/";
 
-
-
+	public const string SERVER_INPUT_PATH = "";
+	public const string SERVER_OUTPUT_PATH = "";
 
 	/// <summary>
 	/// 得到Resources文件夹下的路径，用于Resources.Load()
@@ -50,7 +51,6 @@ public class ConfigPath {
 		int index = path.IndexOf ("Assets");
 		if (index < 0) return null;
 		return path.Substring (index);
-
 	}
 
 	/// <summary>
@@ -65,7 +65,7 @@ public class ConfigPath {
 	{
 		string path = Application.dataPath +"/"+ assetPath;
 		
-		return ConfigPath.TrimPath_Assets( GetUnExistPathByGlobalPath (path));
+		return ConfigPath.TrimPath_Assets(GetUnExistPathByGlobalPath (path,c));
 	}
 	
 	/// <summary>
@@ -87,7 +87,7 @@ public class ConfigPath {
 		
 		
 		string returnName;
-		string[] paths = fileName.Split[c];
+		string[] paths = fileName.Split(c);
 		
 		if (paths.Length>1) 
 		{	
@@ -98,6 +98,6 @@ public class ConfigPath {
 		}
 		
 		return   GetUnExistPathByGlobalPath( Path.GetDirectoryName (globalPath)
-		                                    + returnName  + Path.GetExtension (globalPath));
+		                                    + returnName  + Path.GetExtension (globalPath),c);
 	}
 }
