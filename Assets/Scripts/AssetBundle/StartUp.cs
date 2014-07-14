@@ -4,14 +4,28 @@ using System.Collections;
 
 [InitializeOnLoad]
 public class StartUp : MonoBehaviour {
+	public static bool bCheckNewModelFlag = true;
+
+	public static float checkModelRate = 5;
+
+	public static float lastTime =0;
+
+	public static float s_MinDelay = 0.016666f;
+
 	static StartUp()
 	{
 		EditorApplication.update += Update;
+
 	}
 
 	static void Update ()
 	{
-
+		//Time.time;
+		if((Time.time-lastTime)/s_MinDelay>1)
+		{
+			lastTime = Time.time;
+			CheckNewModelExist();
+		}
 	}
 
 	/// <summary>
@@ -21,10 +35,8 @@ public class StartUp : MonoBehaviour {
 	{
 		if (false) 
 		{
-			string data = "";
 
-			ModelData modelData = new ModelData();
-			ModelManager.Instance.ImportModel(modelData);
+			ModelManager.Instance.ImportModel();
 		}
 	}
 

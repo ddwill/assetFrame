@@ -17,6 +17,8 @@ public class ConfigPath {
 
 	public const string SERVER_INPUT_PATH = "";
 	public const string SERVER_OUTPUT_PATH = "";
+	
+	public const string MODELS_INFO_PATH = "F:\\ModelInfos.xml";
 
 	/// <summary>
 	/// 得到Resources文件夹下的路径，用于Resources.Load()

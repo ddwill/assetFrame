@@ -6,13 +6,23 @@ using System.IO;
 public class FileTool{
 	public static void CreateDirectory(string path)
 	{
-
 		string dirPath = Application.dataPath +"/"+ System.IO.Path.GetDirectoryName (path).TrimStart ("Assets/".ToCharArray ());
 		bool isExists = System.IO.Directory.Exists(dirPath);
 
 		if (!isExists) 
 		{
 			System.IO.Directory.CreateDirectory(dirPath);
+		}
+	}
+
+	public static void CreateDirectoryRealPath(string realPath)
+	{
+		//string dirPath = Application.dataPath +"/"+ System.IO.Path.GetDirectoryName (path).TrimStart ("Assets/".ToCharArray ());
+		bool isExists = System.IO.Directory.Exists(Path.GetDirectoryName(realPath));
+		
+		if (!isExists) 
+		{
+			System.IO.Directory.CreateDirectory(Path.GetDirectoryName(realPath));
 		}
 	}
 
