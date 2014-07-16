@@ -14,12 +14,18 @@ public class ConfigPath {
 	public const string MODEL_STORE_PATH = RESOURCES_PATH+"Model/";
 	public static string MODEL_STORE_GLOBAL_PATH = Application.dataPath + "/Resources/Model/";
 	public static string MESH_STORE_GLOBAL_PATH = MODEL_STORE_GLOBAL_PATH + "Mesh/";
+	public static string MODEL_STORE_PREFAB_PATH = MODEL_STORE_PATH+"Prefab/";
+	public static string MODEL_STORE_BUNDEL_PATH = MODEL_STORE_PATH+"Bundle/";
 
 	public const string SERVER_INPUT_PATH = "";
 	public const string SERVER_OUTPUT_PATH = "";
 	
 	public const string MODELS_INFO_PATH = "F:\\ModelInfos.xml";
-
+	
+	public const string BUNDLE_ANDROID_EXTENTION = "_android.assetbundle";
+	public const string BUNDLE_WEB_EXTENTION = "_web.assetbundle";
+	public const string BUNDLE_IPHONE_EXTENTION = "_iphone.assetbundle";
+	public const string BUNDLE_OUTPUT_PATH = "F:/output/";
 	/// <summary>
 	/// 得到Resources文件夹下的路径，用于Resources.Load()
 	/// </summary>
@@ -31,7 +37,6 @@ public class ConfigPath {
 		string[] splitResult =  path.Split (strings, System.StringSplitOptions.RemoveEmptyEntries);
 		return splitResult [splitResult.Length - 1];
 	}
-
 
 	/// <summary>
 	/// 去掉后缀

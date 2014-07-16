@@ -16,6 +16,10 @@ public class ModelData  {
 	
 	public string httpSourceUrl;
 	public string serverBundlePath;
+
+	/// <summary>
+	/// bundle文件夹
+	/// </summary>
 	public string localBundlePath;
 	public string prefabPath;
 	public string outFbxPath;
@@ -35,6 +39,14 @@ public class ModelData  {
 	[XmlIgnore]
 	public GameObject prefab;
 
+	[XmlIgnore]
+	public ModelManager.ModelImportState improtState = ModelManager.ModelImportState.none;
+
+	public List<string> bundlePaths = new List<string>();
+	public List<string> GetBundlePath()
+	{
+		return bundlePaths;
+	}
 
 }
 
@@ -43,6 +55,7 @@ public class ModelRenderData
 	public string meshPath;
 	public string materialPath;
 	public string shaderPath;
+	public string name;
 }
 
 /// <summary>
