@@ -25,7 +25,11 @@ public class ConfigPath {
 	public const string BUNDLE_ANDROID_EXTENTION = "_android.assetbundle";
 	public const string BUNDLE_WEB_EXTENTION = "_web.assetbundle";
 	public const string BUNDLE_IPHONE_EXTENTION = "_iphone.assetbundle";
-	public const string BUNDLE_OUTPUT_PATH = "F:/output/";
+
+	public const string BUNDLE_OUTPUT_PATH = "E://xmpp/htdocs/server1.1/Bundle/";
+
+    public const string SERVER_PATH = "http://localhost/server1.1/index.php?";
+    
 	/// <summary>
 	/// 得到Resources文件夹下的路径，用于Resources.Load()
 	/// </summary>

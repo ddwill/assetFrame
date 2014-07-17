@@ -20,11 +20,15 @@ public class StartUp : MonoBehaviour {
 
 	static void Update ()
 	{
+        //Debug.Log("CheckNewModelExist");
+
+        CheckNewModelExist();
+        DuNetManager.Instance.CheckNetEvent();
 		//Time.time;
 		if((Time.time-lastTime)/s_MinDelay>1)
 		{
 			lastTime = Time.time;
-			CheckNewModelExist();
+			
 		}
 	}
 
@@ -33,7 +37,7 @@ public class StartUp : MonoBehaviour {
 	/// </summary>
 	public static void CheckNewModelExist()
 	{
-		if (false) 
+		if (true) 
 		{
 
 			ModelManager.Instance.ImportModel();

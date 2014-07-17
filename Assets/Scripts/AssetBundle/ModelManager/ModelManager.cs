@@ -61,7 +61,6 @@ public class ModelManager {
 	public void ImportModel()
 	{
 		this.modelDatas =  ReadModelsInfoList ();
-		Debug.Log ("ImportModel!!!!!!!"+modelDatas.Count);
 		foreach(ModelData data in modelDatas)
 		{
 			data.improtState = ModelImportState.ImportModel;
@@ -75,7 +74,7 @@ public class ModelManager {
 			AssetDatabase.Refresh ();
 			#endregion
 
-			CreatePrefab(data);
+			CreatePrefab(data); 
 			/**AddAnimation (data);
 			SeperateModeleSources (data);
 			BuidlAssetBundle (data);
@@ -182,7 +181,10 @@ public class ModelManager {
 		File.Copy (data.localBundlePath+ConfigPath.BUNDLE_IPHONE_EXTENTION, data.serverBundlePath+ConfigPath.BUNDLE_IPHONE_EXTENTION,true);
 		File.Copy (data.localBundlePath+ConfigPath.BUNDLE_WEB_EXTENTION, data.serverBundlePath+ConfigPath.BUNDLE_WEB_EXTENTION,true);
 
+        
 		//http请求服务器
+        DuNetManager.Instance.SendMessage_FinishBuild(data);
+
 
 	}
 
@@ -217,9 +219,19 @@ public class ModelManager {
 	public List<ModelData> ReadModelsInfoList()
 	{
 
-		List<ModelData> modelDataList = XMLTool.ReadListInRoot<ModelData>(ConfigPath.MODELS_INFO_PATH,"Root");
-
-		return modelDataList;
+        List<ServerModelMessage> serverDataList = XMLTool.ReadListInRoot<ServerModelMessage>(ConfigPath.MODELS_INFO_PATH, "Root");
+        List<ModelData> modelDataList = new List<ModelData>();
+        foreach (ServerModelMessage message in serverDataList)
+        {
+            if(!message.hasRead)
+            {
+                message.hasRead = true;
+                modelDataList.Add(new ModelData(message));
+            }
+           
+        }
+        XMLTool.SaveListInRoot(serverDataList,ConfigPath.MODELS_INFO_PATH,"Root");
+        return modelDataList;
 	}
 
 	/// <summary>
@@ -228,25 +240,26 @@ public class ModelManager {
 	public void SaveModelInfoList()
 	{
 
-		XMLTool.SaveListInRoot(modelDatas,ConfigPath.MODELS_INFO_PATH,"Root");
+		//XMLTool.SaveListInRoot(modelDatas,ConfigPath.MODELS_INFO_PATH,"Root");
 	}
 
 	#endregion
 
-
+    
 	#region Test
 
 	[MenuItem("Test/AddModelData")]
 	public static void TestAddData()
 	{
-		List<ModelData> modelDatas = new List<ModelData> ();
-		ModelData data = new ModelData ();
-		data.id = 11;
-		data.userId = 23123;
-		data.outFbxPath = "F:\\Tree02.FBX";
-		modelDatas.Add (data);
 
-		XMLTool.SaveListInRoot(modelDatas,"F:\\ModelInfos.xml","Root");
+        List<ServerModelMessage> serverModelDatas = new List<ServerModelMessage>();
+        ServerModelMessage msg = new ServerModelMessage();
+        msg.id = 11;
+        msg.userId = 23123;
+        msg.outFbxPath = "F:\\Tree02.FBX";
+        serverModelDatas.Add(msg);
+
+        XMLTool.SaveListInRoot(serverModelDatas, "F:\\ModelInfos.xml", "Root");
 	}
 
 	[MenuItem("Test/ModelManager/ImportModel")]

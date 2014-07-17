@@ -48,6 +48,30 @@ public class ModelData  {
 		return bundlePaths;
 	}
 
+    public ModelData()
+    {
+    }
+
+    public ModelData(ServerModelMessage serverMessage)
+    {
+        this.id = serverMessage.id;
+        this.userId = serverMessage.userId;
+        this.name = serverMessage.name;
+        this.outFbxPath = serverMessage.outFbxPath;
+    }
+
+    public string getBundlePath(BuildTarget buildTarget)
+    {
+
+        switch (buildTarget)
+        {
+            case BuildTarget.WebPlayer: return this.serverBundlePath + ConfigPath.BUNDLE_WEB_EXTENTION;
+            case BuildTarget.Android: return this.serverBundlePath + ConfigPath.BUNDLE_ANDROID_EXTENTION;
+            case BuildTarget.iPhone: return this.serverBundlePath + ConfigPath.BUNDLE_IPHONE_EXTENTION;
+        }
+
+        return null;
+    }
 }
 
 public class ModelRenderData
@@ -63,5 +87,22 @@ public class ModelRenderData
 /// </summary>
 public class ModelAnimationData
 {
+
+}
+
+[System.Serializable]
+public class ServerModelMessage
+{
+    [XmlAttribute]
+    public int id;
+    [XmlAttribute]
+    public int userId;
+    [XmlAttribute]
+    public string name;
+    [XmlAttribute]
+    public bool hasRead = false;
+
+    public string outFbxPath;
+
 
 }
